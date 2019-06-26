@@ -1,7 +1,7 @@
 import json
 import urllib
 
-start_of_stream_time="09:52"
+start_of_stream_time="09:51"
 
 def difference(start,end):
 #    print "Changinge start {} end {}".format(start,end)
@@ -25,7 +25,7 @@ for x in reversed(output['query']['usercontribs']):
   #  print timestamp, x['comment']
     title=x['title']
     try: 
-            print("{}, {}, Comment: \"{}\"".format(difference(start_of_stream_time,timestamp),title,x['comment']))
+            print("{}:00, {}, Comment: \"{}\"".format(difference(start_of_stream_time,timestamp),title,x['comment']))
     except:
             print "odd"    
 #print (output)
